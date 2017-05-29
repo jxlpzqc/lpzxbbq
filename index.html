@@ -106,9 +106,11 @@
 								<div class="rateit">
 									<span> </span>
 								</div>
+								<!-- 
 								<div class="post-share">
 									<span> </span>
-								</div>
+								</div> 
+								-->
 								<div class="clear"></div>
 							</div>
 						</div></li>
@@ -123,28 +125,8 @@
 	<script src="js/jquery.imagesloaded.js"></script>
 	<script src="js/jquery.wookmark.js"></script>
 	<script type="text/javascript">
-	 function asynchronousLoading(number)
-	 {
-// 	console.log("hello");
-// 		$.get("getLoveContent.php",{ "number" : 0 },function(data){
-// 			console.log("hello");
-// 			});
-		  $.ajax({
-		        type : "GET",
-		        url : "getLoveContent.php",
-		        data : "number="+number , 
-		        dataType : "json",
-		        success : function (data) {
-		            $.each(data.items, function (i, item) {
-		                //$("<img class='para'/> ").attr("src", item.media.m).appendTo("#resText");
-		                //if (i == 3) {
-		                  //  return false;
-		                //}
-		                console.log(item);
-		            });
-		        }
-		    });
-     } 
+	
+	
 
 	
 		    (function ($){
@@ -160,10 +142,21 @@
 		            itemWidth:280 // Optional, the width of a grid item
 		          };
 
-			 function asynchronousLoading(number)
-			 {
-				contents = $.get("getLoveContent.php",{ "number" : number });
-		     } 
+			//implement asynchronous loading from server	
+
+		 	 function asynchronousLoading(number)
+		 	 {
+		 	
+		 		 var obj;
+		 		$.get("getLoveContent.php",{ "number" : 0 },function(data){
+		 			console.log(data);
+		 			obj = jQuery.parseJSON(data);
+		 			console.log(obj);
+		  		});
+		 		
+		 		return obj;
+		 		 
+		      } 
 
 	          
 		      /**
