@@ -87,34 +87,51 @@
 	<!---//End-header---->
 	
 	<!---start-content---->
-	<div class="content">
+    <div class="content" style="
+    clear: both;
+    position: relative;
+    top: 30px;
+    ">
 		<div class="wrap">
 			<div id="main" role="main">
 				<ul id="tiles">
 					<!-- These are our grid blocks -->
-					<li onClick="location.href='single-page.html';"><img
-						src="images/img1.jpg" width="200" height="200">
+
+				<li onClick="location.href='single-page.html';">
+                    <img src="images/img2.jpg" width="200">
 						<div class="post-info">
 							<div class="post-basic-info">
-								<h3>
-									<a href="#">我爱学习</a>
-								</h3>
-								<span><a href="#"><label> </label>景德镇-乐平中学</a></span>
-								<p>学习是我的最爱。</p>
+                                <div class="post-sender">
+                                    <img class="post-sender-pic" src="images/head.jpg"  style=" width:30px; 
+                                    height:30px; 
+                                    border-radius:30px; 
+                                    float: left;" />
+                                    <h3 style="margin-left:5px;
+                                                   margin-left: 5px;
+                                        float: left;">
+                                        <a class="post-sender-name" href="#">一位诚实的骗子</a>
+                                    </h3>
+                                </div>
+								<span style="clear:both;display: block;block;padding-top: 4px;"><a href="#" class="post-send-position"><label> </label>景德镇-乐平中学</a></span>
+                                <p class="post-content">
+                                    <span class="at-whom not-registed-whom">@学习</span>
+                                    <a class="at-whom">@特三班</a>
+                                    <span>我爱你们!</span>
+                                </p>
 							</div>
-							<div class="post-info-rate-share">
-								<div class="rateit">
-									<span> </span>
+							<div class="like-info">
+								<div class="like-number">
+									<span> 有1人觉得很赞</span>
 								</div>
-								<!-- 
-								<div class="post-share">
+								 
+								<div class="like-it">
 									<span> </span>
 								</div> 
-								-->
+								
 								<div class="clear"></div>
 							</div>
 						</div></li>
-					
+                    
 					<!-- End of grid blocks -->
 				</ul>
 			</div>
@@ -186,10 +203,17 @@
 		          // Get the first then items from the grid, clone them, and add them to the bottom of the grid
 		          // TODO 异步加载 
 		          
-		          var $items = $('li', $tiles);
-		          var $firstTen = $items.slice(0, 10);
-		          $tiles.append($firstTen.clone());
-		
+//                  var $items = $('li', $tiles);
+//		          var $firstTen = $items.slice(0, 10);
+//		          $tiles.append($firstTen.clone());
+//		          
+                  var $datas = asynchronousLoading(0);
+                  for($data in $datas){
+                      var $items = $('li', $tiles);
+                      var $item = $items.slice(0,1).clone();
+                      $('.post-sender-name',$item).html("A龙");
+                      $tiles.append($item);
+                  }
 		          applyLayout();
 		        }
 		      };

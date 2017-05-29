@@ -202,8 +202,11 @@ a.boxclose{
 }
 /*--//userinfo--*/
 /*----start-post-grids----*/
-.post-share span{
-	background:url(../images/facebook.png) no-repeat 0px 0px;
+
+
+
+.like-it span{
+	background:url(../images/like.png) no-repeat 0px 0px;
 	height:26px;
 	width:26px;
 	display:inline-block;
@@ -212,18 +215,19 @@ a.boxclose{
 	-moz-border-radius:30em;
 	-o-border-radius:30em;
 }
-.post-share span:hover{
-	background:url(../images/facebookh.png) no-repeat 0px 0px;
+.like-it span:hover{
+	background:url(../images/likeh.png) no-repeat 0px 0px;
 }
-.rateit span{
-	height:18px;
-	width:76px;
-	background:url(../images/start-rate.png) no-repeat 0px 0px; 
-	display:inline-block;
+
+
+
+
+.like-number span{
+    line-height: 20px;
+    font-size: 15px;
+    
 }
-.rateit span:hover{
-	background:url(../images/start-rateh.png) no-repeat 0px 0px; 
-}
+
 .post-basic-info{
 	padding: 7% 7% 5% 7%;
 }
@@ -264,16 +268,16 @@ a.boxclose{
 	margin: 0.6em 0;
 	line-height: 1.5em;
 }
-/*--post-info-rate-share--*/
-.post-info-rate-share{
+/*--like-info--*/
+.like-info{
 	border-top: 1px solid rgba(183, 181, 181, 0.36);
 	padding: 4% 0 2%;
 }
-.rateit{
+.like-number{
 	float:left;
 	margin: 0.18em 0 0 1em;
 }
-.post-share{
+.like-it{
 	float:right;
 	margin-right:1.5em;
 }
@@ -297,6 +301,23 @@ a.boxclose{
 .footer p a:hover{
 	color:#8C8C8C;
 }
+
+.post-basic-info .post-content{
+    color: black;
+    
+}
+
+.at-whom{
+    background-color:cornsilk;
+    border-radius:5px;
+    color:cadetblue;
+}
+
+.not-registed-whom{
+    background-color: white;
+    color :coral;
+}
+
 /*----start-single-page----*/
 .artical-content h3 a{
 	font: 400 28px/28px 'Open Sans', sans-serif;
@@ -1205,3 +1226,4 @@ span.mail a:hover{
 	}
 }
 /*--//End-media Quries for 320px-monitors-*/
+

@@ -11,7 +11,7 @@ else{
 
 
 $db->query("set names utf8");
-$sth = $db->prepare("SELECT a.c_id ,a.content ,a.time
+$sth = $db->prepare("SELECT a.c_id ,a.content ,a.time,a.position
 				,b.nickname
 				FROM `love_content` a
 				LEFT JOIN `users` b on a.u_id = b.id
