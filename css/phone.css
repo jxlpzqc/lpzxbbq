@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-navi {
+    height: 60px;
+    width: 100%;
+    background: white;  
+    background-size:30px 30px; 
+    line-height : 60px ;
+    position:fixed;
+    bottom: 0px;
+}
+
+
+
+
+.top-navi .navi-button{
+    width: 33%;
+    float: left;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color:white;
+    font-size: 20px;
+    
+}
+
+.bottom-navi .navi-button{
+    height: 100%;
+    width: 25%;
+    float: left;
+    font-size:25px;
+    text-align: center;
+    background: white;
+    border-top-width:thin;
+    border-top-color: black;
+    border-top-style:solid;
+   
+}
+
+
+
+
+
+.navi-button a{
+    
+     color: black;
+    text-decoration: none;
+    
+}
+
+.bottom-navi .navi-button-active{
+    background: black;
+   
+}
+
+.top-navi .navi-button-active{
+    background:black;
+    
+}
+
+
+.navi-button-active a{
+     color: white;
+    
+}
+
+
+
+
+
+
+.top-logo {
+    width: 100px ;
+    height: 60px;
+    float: left;
+    
+    
+}
+
+.top-serch {
+    
+    height: 60px;
+}
+
+
+
+.top {
+    height: 60px;
+}
+
+.top-navi {
+    width: 100%;
+    clear: both;
+    display: none;
+}
+
+@media only screen and (min-width:640px){
+    
+    .bottom-navi{
+        display: none;        
+    }
+    
+    .top-navi{
+        display: block;
+        
+    }
+}
